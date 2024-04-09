@@ -1,0 +1,5 @@
+export const algoliaConfig = {
+  ALGOLIA_APP_ID: process.env.REACT_APP_ALGOLIA_APP_ID,
+  ALGOLIA_ADMIN_KEY: process.env.REACT_APP_ALGOLIA_ADMIN_KEY,
+  ALGOLIA_INDEX_NAME: process.env.REACT_APP_ALGOLIA_INDEX_NAME,
+};
