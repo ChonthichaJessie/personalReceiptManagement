@@ -1,5 +1,7 @@
 import React from "react";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
+import styled from "styled-components";
+import ReceiptDetails from "./receiptDetails";
 
 const AlgoliaSearchLists = ({searchClient, indexName}) => {
   const Hit = ({ hit }) => {
@@ -7,6 +9,8 @@ const AlgoliaSearchLists = ({searchClient, indexName}) => {
       <div>
         <h2>{hit.objectID}</h2>
         <p>{hit.category}</p>
+        <ReceiptDetails data={hit.ocr_text} />
+        <p>{hit.date}</p>
       </div>
     );
   };
@@ -21,3 +25,11 @@ const AlgoliaSearchLists = ({searchClient, indexName}) => {
 };
 
 export default AlgoliaSearchLists;
+
+const Details = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 16px;
+`;

@@ -10,6 +10,7 @@ import {
   doc,
   //connectFirestoreEmulator,
 } from "firebase/firestore";
+import { db } from "./utils/firebase";
 import receiptData from "./ReceiptData.json";
 import { algoliaConfig } from "./utils/algolia";
 import styled from "styled-components";
@@ -20,7 +21,6 @@ import AlgoliaSearchLists from "./components/algoliaSearchLists";
 import UploadImage from "./components/uploadImages";
 import OcrDisplay from "./components/ocrDisplay";
 import ImagesDisplay from "./components/imagesDisplay";
-import { db } from "./utils/firebase";
 
 const { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY, ALGOLIA_INDEX_NAME } = algoliaConfig;
 
@@ -42,6 +42,7 @@ const App = () => {
   //       method: "post",
   //       maxBodyLength: Infinity,
   //       url: "https://cors-anywhere.herokuapp.com/https://api.veryfi.com/api/v8/partner/documents",
+  //       Hide all of the keys and tokens
   //       headers: {
   //         "Content-Type": "application/json",
   //         Accept: "application/json",
@@ -58,6 +59,7 @@ const App = () => {
   //     console.log(error);
   //   }
   // };
+
   const [uploadedImageURLs, setUploadedImagesURLs] = useState([]);
 
   const handleImageUpload = (imageURLs) => {
@@ -94,6 +96,7 @@ const App = () => {
     //       method: "post",
     //       maxBodyLength: Infinity,
     //       url: "https://cors-anywhere.herokuapp.com/https://api.veryfi.com/api/v8/partner/documents",
+    //       Hide all of the keys and tokens
     //       headers: {
     //         "Content-Type": "application/json",
     //         Accept: "application/json",
@@ -117,6 +120,7 @@ const App = () => {
     setReceipt(receipt);
     setSearchClient(algoliasearch(ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY));
   }, []);
+
 
   return (
     <div>
