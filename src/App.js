@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 //import axios from "axios";
 import { useEffect } from "react";
-import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  //collection,
-  //addDoc,
-  setDoc,
-  doc,
-  //connectFirestoreEmulator,
-} from "firebase/firestore";
-import { db } from "./utils/firebase";
+import { setDoc, doc } from "firebase/firestore";
+import { db, storage } from "./utils/firebase";
 import receiptData from "./ReceiptData.json";
 import { algoliaConfig } from "./utils/algolia";
 import styled from "styled-components";
+import {
+  getDownloadURL,
+  ref as storageRef,
+  uploadBytes,
+} from "firebase/storage";
 
 //Algolia Key - - Need to rebuild search bar
 import algoliasearch from "algoliasearch/lite";
@@ -61,18 +58,20 @@ const App = () => {
   // };
 
   const [uploadedImageURLs, setUploadedImagesURLs] = useState([]);
-
-  const handleImageUpload = (imageURLs) => {
+  const [uploadedImages, setUploadedImages] = useState([]);
+  const handleURLImageUpload = (imageURLs) => {
     setUploadedImagesURLs(imageURLs);
     //call ocr from here
     //ocrFetching();
   };
+  const handleImagesUpload = (uploadedImages) => {
+    setUploadedImages(uploadedImages);
+  };
+  const receiptDateJoinID =
+    JSON.stringify(receipt.date) + JSON.stringify(receipt.id) + Math.random();
+  const receiptNumber = receiptDateJoinID.replace(/[^a-zA-Z0-9]/g, "");
 
   const addItemToFirestore = async () => {
-    const receiptDateJoinID =
-      JSON.stringify(receipt.date) + JSON.stringify(receipt.id) + Math.random();
-    const receiptNumber = receiptDateJoinID.replace(/[^a-zA-Z0-9]/g, "");
-
     try {
       const docRef = await setDoc(doc(db, "users", receiptNumber), receiptData);
       console.log("Submitted to Firestore");
@@ -80,10 +79,23 @@ const App = () => {
       console.error("Error adding item to Firestore:", error);
     }
   };
+  const addImagesToFirestore = async () => {
+    try {
+      uploadedImages.forEach(async (image, index) => {
+        const imageRef = storageRef(storage, `receipts/${receiptNumber}/image${index}`);
+        await uploadBytes(imageRef, image);
+        const url = await getDownloadURL(imageRef);
+        console.log("Image uploaded to storage", url);
+      });
+    } catch (error) {
+      console.error("Error adding image to Firestore:", error);
+    }
+  }
 
-  // const uploadReceiptHandler = () => {
-  //   addItemToFirestore();
-  // };
+  const uploadReceiptHandler = () => {
+    addItemToFirestore();
+    addImagesToFirestore();
+  };
 
   useEffect(() => {
     // const fetchData = async () => {
@@ -121,16 +133,18 @@ const App = () => {
     setSearchClient(algoliasearch(ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY));
   }, []);
 
-
   return (
     <div>
       <h1>Receipt Management</h1>
-      <UploadImage onImageUpload={handleImageUpload} />
+      <UploadImage
+        onImageURLsUpload={handleURLImageUpload}
+        onImagesUpload={handleImagesUpload}
+      />
       <Display>
         <ImagesDisplay imageURLs={uploadedImageURLs} />
         <OcrDisplay data={JSON.stringify(receipt, null, 1)} />
       </Display>
-      <button onClick={addItemToFirestore}>Upload receipt</button>
+      <button onClick={uploadReceiptHandler}>Upload receipt</button>
       {searchClient && (
         <AlgoliaSearchLists
           searchClient={searchClient}

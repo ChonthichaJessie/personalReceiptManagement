@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const UploadImage = ({ onImageUpload }) => {
+const UploadImage = ({ onImageURLsUpload,onImagesUpload }) => {
   const [images, setImages] = useState([]);
   const [imageURLs, setImageURLs] = useState([]);
 
@@ -13,8 +13,9 @@ const UploadImage = ({ onImageUpload }) => {
       number: index + 1,
     }));
     setImageURLs(newImageURLs);
-    onImageUpload(imageURLs);
-  }, [images, onImageUpload]);
+    onImageURLsUpload(imageURLs);
+    onImagesUpload(images);
+  }, [images, onImageURLsUpload, onImagesUpload]);
 
   const onImageChange = (e) => {
     setImages([...e.target.files]);
