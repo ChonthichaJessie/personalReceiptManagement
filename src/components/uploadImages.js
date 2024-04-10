@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { List } from "react-virtualized";
 import styled from "styled-components";
 
 const UploadImage = ({ onImageUpload }) => {
@@ -14,10 +13,8 @@ const UploadImage = ({ onImageUpload }) => {
       number: index + 1,
     }));
     setImageURLs(newImageURLs);
-    onImageUpload(images);
+    onImageUpload(imageURLs);
   }, [images, onImageUpload]);
-
-  onImageUpload(images);
 
   const onImageChange = (e) => {
     setImages([...e.target.files]);
@@ -31,22 +28,6 @@ const UploadImage = ({ onImageUpload }) => {
         multiple
         accept="image/*"
       />
-      <ImageWrapper>
-        {imageURLs.length > 0 && (
-          <div
-            style={{ height: 500 , width: 300, overflowY: "auto" }}
-          >
-            <img
-              src={imageURLs[0].url}
-              alt={`Receipt ${imageURLs[0].number}`}
-              style={{
-                cursor: "pointer",
-                width: '100%',
-              }}
-            />
-          </div>
-        )}
-      </ImageWrapper>
     </div>
   );
 };

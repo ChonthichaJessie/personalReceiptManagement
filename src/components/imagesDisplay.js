@@ -1,38 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { List } from "react-virtualized";
+import React from "react";
 import styled from "styled-components";
 
-const UploadImage = ({ onImageUpload }) => {
-  const [images, setImages] = useState([]);
-  const [imageURLs, setImageURLs] = useState([]);
-
-  useEffect(() => {
-    if (images.length < 1) return;
-    const newImageURLs = images.map((image, index) => ({
-      url: URL.createObjectURL(image),
-      date: new Date().toISOString(),
-      number: index + 1,
-    }));
-    setImageURLs(newImageURLs);
-    onImageUpload(images);
-  }, [images, onImageUpload]);
-
-  onImageUpload(images);
-
-  const onImageChange = (e) => {
-    setImages([...e.target.files]);
-  };
-
+const ImagesDisplay = ({imageURLs}) => {
   return (
-    <div>
-      <FilesInput
-        type="file"
-        onChange={onImageChange}
-        multiple
-        accept="image/*"
-      />
-      <ImageWrapper>
-        {imageURLs.length > 0 && (
+    <Wrapper>
+      {imageURLs.length > 0 && (
           <div
             style={{ height: 500 , width: 300, overflowY: "auto" }}
           >
@@ -46,20 +18,17 @@ const UploadImage = ({ onImageUpload }) => {
             />
           </div>
         )}
-      </ImageWrapper>
-    </div>
+    </Wrapper>
   );
 };
 
-export default UploadImage;
+export default ImagesDisplay;
 
-const FilesInput = styled.input`
-  margin-left: 16px;
-  margin-bottom: 16px;
-  margin-right: 16px;
-`;
-
-const ImageWrapper = styled.div`
+const Wrapper = styled.div`
+  background-color: #663399;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 60%;
   margin-left: 16px;
   display: flex;
   flex-wrap: wrap;

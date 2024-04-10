@@ -12,11 +12,14 @@ import {
 } from "firebase/firestore";
 import receiptData from "./ReceiptData.json";
 import { algoliaConfig } from "./utils/algolia";
+import styled from "styled-components";
 
 //Algolia Key - - Need to rebuild search bar
 import algoliasearch from "algoliasearch/lite";
 import AlgoliaSearchLists from "./components/algoliaSearchLists";
 import UploadImage from "./components/uploadImages";
+import OcrDisplay from "./components/ocrDisplay";
+import ImagesDisplay from "./components/imagesDisplay";
 
 const { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY, ALGOLIA_INDEX_NAME } = algoliaConfig;
 
@@ -38,9 +41,10 @@ const App = () => {
   const [receipt, setReceipt] = useState(receiptData);
   // Algolia
   const [searchClient, setSearchClient] = useState(null);
-  const [uploadedImages, setUploadedImages] = useState([]);
-  const handleImageUpload = (images) => {
-    setUploadedImages(images);
+  const [uploadedImageURLs, setUploadedImagesURLs] = useState([]);
+  
+  const handleImageUpload = (imageURLs) => {
+    setUploadedImagesURLs(imageURLs);
   };
 
   const ocrFetching = async () => {
@@ -129,7 +133,11 @@ const App = () => {
     <div>
       <h1>Receipt Management</h1>
       <UploadImage onImageUpload={handleImageUpload} />
-      <pre>{JSON.stringify(receipt, null, 1)}</pre>
+      <Display>
+      <ImagesDisplay imageURLs={uploadedImageURLs} />
+      <OcrDisplay data={JSON.stringify(receipt, null, 1)} />
+      </Display>
+      
       <button onClick={addItemToFirestore}>Upload receipt</button>
       {searchClient && (
         <AlgoliaSearchLists
@@ -149,3 +157,11 @@ const App = () => {
 };
 
 export default App;
+
+const Display = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 16px;
+`;
