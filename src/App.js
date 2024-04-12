@@ -16,7 +16,7 @@ import {
 import algoliasearch from "algoliasearch/lite";
 import AlgoliaSearchLists from "./components/algoliaSearchLists";
 import UploadImage from "./components/uploadImages";
-import OcrDisplay from "./components/ocrDisplay";
+import OcrDisplay from "./components/OcrDisplay";
 import ImagesDisplay from "./components/imagesDisplay";
 
 const { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY, ALGOLIA_INDEX_NAME } = algoliaConfig;
