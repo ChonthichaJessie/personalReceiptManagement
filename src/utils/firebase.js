@@ -23,15 +23,17 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage();
-export const provider = new GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const logInWithGoogle = async () => {
-  const response = signInWithGooglePopup();
-  console.log("logInWithGooglePopUp: ",response);
-}
-
+  const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ prompt: "select_account" });
+  try {
+    const result = await signInWithPopup(auth, provider);
+    console.log("Signed in with Google");
+  } catch (error) {
+    console.error("Caught error Popup closed", error);
+  }
+};
 
 export const logInWithEmailAndPassword = async (email, password) => {
   try {
