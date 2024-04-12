@@ -18,6 +18,9 @@ import AlgoliaSearchLists from "./components/AlgoliaSearchLists";
 import ImagePicker from "./components/ImagePicker";
 import OcrDisplay from "./components/OcrDisplay";
 import ImagesDisplay from "./components/ImagesDisplay";
+import EmailPasswordLogin from "./components/EmailPasswordLogin";
+import GoogleLogin from "./components/GoogleLogin";
+import Login from "./components/Login";
 
 const { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY, ALGOLIA_INDEX_NAME } = algoliaConfig;
 
@@ -140,6 +143,10 @@ const App = () => {
 
   return (
     <div>
+      <div>
+        <h1>User Authentication</h1>
+        <Login />
+      </div>
       <h1>Receipt Management</h1>
       <ImagePicker onPickImages={setLocalImages} />
       <Display>

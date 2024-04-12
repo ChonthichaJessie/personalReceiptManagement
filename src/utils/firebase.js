@@ -6,6 +6,8 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -21,10 +23,30 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage();
+export const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
-export const signIn = (email, password) => {
-  return signInWithEmailAndPassword(auth, email, password);
+export const logInWithGoogle = async () => {
+  const response = signInWithGooglePopup();
+  console.log("logInWithGooglePopUp: ",response);
+}
+
+
+export const logInWithEmailAndPassword = async (email, password) => {
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    console.log("Signed in with Email and Password");
+  } catch (error) {
+    console.error(error);
+  }
 };
-export const signUp = (email, password) => {
-  return createUserWithEmailAndPassword(auth, email, password);
+
+export const createNewEmailAndPassword = async (email, password) => {
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    console.log("Created new email and password");
+  } catch (error) {
+    console.error(error);
+  }
 };
