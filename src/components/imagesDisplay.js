@@ -1,23 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const ImagesDisplay = ({imageURLs}) => {
+const ImagesDisplay = ({ imageURLs }) => {
   return (
     <Wrapper>
       {imageURLs.length > 0 && (
-          <div
-            style={{ height: 500 , width: 300, overflowY: "auto" }}
-          >
-            <img
-              src={imageURLs[0].url}
-              alt={`Receipt ${imageURLs[0].number}`}
-              style={{
-                cursor: "pointer",
-                width: '100%',
-              }}
-            />
-          </div>
-        )}
+        <div style={{ height: 500, width: 300, overflowY: "auto" }}>
+          <img
+            src={imageURLs[0]}
+            alt="Receipt 1"
+            style={{
+              cursor: "pointer",
+              width: "100%",
+            }}
+          />
+        </div>
+      )}
     </Wrapper>
   );
 };
