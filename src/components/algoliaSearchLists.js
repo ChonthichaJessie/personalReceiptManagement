@@ -10,6 +10,7 @@ const AlgoliaSearchLists = ({ searchClient, indexName }) => {
     }
     return (
       <Receipt>
+        <p>Receipt ID: {hit.userEmail}</p>
         <p>Receipt ID: {hit.objectID}</p>
         <p>Purchase Date: {hit.date}</p>
         <p>Category: {hit.category}</p>

@@ -16,11 +16,10 @@ import OcrDisplay from "../components/OcrDisplay";
 import ImagesDisplay from "../components/ImagesDisplay";
 import { setOnUserLoggedInEmailCallback } from "../utils/firebase";
 
-const UploadReceipts = (usereEmail) => {
+const UploadReceipts = ({userEmail}) => {
   const [jsonData, setJsonData] = useState(null);
   const [receipt, setReceipt] = useState(receiptData);
   const [uid, setUid] = useState("");
-  const [userEmail, setUserEmail] = useState("");
   // Algolia
 
   // const ocrFetching = async () => {
@@ -96,13 +95,12 @@ const UploadReceipts = (usereEmail) => {
     }
   };
   const addItemToFirestore = async () => {
-    const userEmail = usereEmail;
     try {
       //cannot add user email to receipt object
       const receiptWithImageURLs = {
         ...receipt,
         imageURLs: fireImageURLs,
-        userEmail: userEmail,
+        userEmail,
       };
       console.log(receiptWithImageURLs);
       const docRef = await setDoc(

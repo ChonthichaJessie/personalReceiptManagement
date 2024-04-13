@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { auth, db, logOut } from "../utils/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
-import { logInWithGoogle, setOnUserLoggedInDisplayCallback } from "../utils/firebase";
+import { logInWithGoogle, setOnUserLoggedInDisplayCallback,setOnUserLoggedInEmailCallback } from "../utils/firebase";
 import UploadReceipts from "./UploadReceipt";
 
 const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
   const [name, setName] = useState("");
-  const [uid, setUid] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const navigate = useNavigate();
   
   // const fetchUserName = async () => {
@@ -42,6 +42,9 @@ const Dashboard = () => {
     setOnUserLoggedInDisplayCallback((name) => {
       setName(name);
     });
+    setOnUserLoggedInEmailCallback((email) => {
+      setUserEmail(email);
+    });
   }, []);
 
   return (
@@ -49,9 +52,9 @@ const Dashboard = () => {
       <DashboardContainer>
       {name ? (
           <>
-            <Welcome>Welcome, {name}</Welcome>
+            <Welcome>Welcome, {name}, {userEmail}</Welcome>
             <Btn onClick={logOut}>Logout</Btn>
-            <UploadReceipts/>
+            <UploadReceipts userEmail={userEmail}/>
           </>
         ) : (
           <Btn onClick={logInWithGoogle}>Log in with Google</Btn>
