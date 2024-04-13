@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ReceiptDetails from "./ReceiptDetails";
 
 const AlgoliaSearchLists = ({ searchClient, indexName }) => {
+  const email = "aa@gmail.com"
   const Hit = ({ hit }) => {
     const handleShowImage = () => {
       window.open(hit.imageURLs, "_blank");
