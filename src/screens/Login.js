@@ -1,13 +1,31 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, signInWithEmailAndPassword, signInWithGoogle,logInWithGoogle,logInWithEmailAndPassword } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, logInWithEmailAndPassword, logInWithGoogle, createNewEmailAndPassword } from "../utils/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import styled from "styled-components";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) navigate("/dashboard");
+  }, [user, loading,navigate]);
+
+  const handleGoogleLogin = async () => {
+    const userName = await logInWithGoogle();
+    if (userName) {
+      navigate("/dashboard", { state: { userName: userName } }); // Pass the user's name as state to the dashboard page
+    } else {
+      console.log("User's name not available");
+    }
+  };
 
   return (
     <Wrapper>
@@ -24,16 +42,16 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        <LoginBtn onClick={() => signInWithEmailAndPassword(email, password)}>
+        <LoginBtn onClick={() => logInWithEmailAndPassword(email, password)}>
           Login
         </LoginBtn>
-        <LoginGoogle onClick={logInWithGoogle}>Login with Google</LoginGoogle>
-        <LoginBtn 
-        onClick={() => {
-          createNewEmailAndPassword(email, password);
-        }}
-        >Sing Up</LoginBtn>
-        
+        <LoginGoogle onClick={handleGoogleLogin}>Login with Google</LoginGoogle>
+        <LoginLink>
+          <Link to="/reset">Forgot Password?</Link>
+        </LoginLink>
+        <LoginLink>
+          Don't have an account? <Link to="/Register">Register</Link> now.
+        </LoginLink>
       </LoginContainer>
     </Wrapper>
   );

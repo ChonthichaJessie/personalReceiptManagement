@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getDatabase } from "firebase/database";
 import { getStorage } from "firebase/storage";
 import {
   getAuth,
@@ -8,7 +7,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  sendPasswordResetEmail,
 } from "firebase/auth";
+import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -20,35 +21,111 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
-export const storage = getStorage();
+const db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage();
 
-export const logInWithGoogle = async () => {
+let onUserLoggedInDisplayCallback = null;
+let onUserLoggedInEmailCallback = null;
+
+const setOnUserLoggedInDisplayCallback = (callback) => {
+  onUserLoggedInDisplayCallback = callback;
+};
+
+const setOnUserLoggedInEmailCallback = (callback) => {
+  onUserLoggedInEmailCallback = callback;
+};
+
+const logInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
+  //user can choose account
   provider.setCustomParameters({ prompt: "select_account" });
   try {
-    const result = await signInWithPopup(auth, provider);
-    console.log("Signed in with Google");
-  } catch (error) {
-    console.error("Caught error Popup closed", error);
+    const res = await signInWithPopup(auth, provider);
+    const user = res.user;
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+    }
+    if (user.displayName) {
+      console.log("User's name:", user.displayName);
+      if (onUserLoggedInDisplayCallback) {
+        onUserLoggedInDisplayCallback(user.displayName);
+      }
+    }
+    if (user.email) {
+      console.log("User's email:", user.email);
+      if (onUserLoggedInEmailCallback) {
+        onUserLoggedInEmailCallback(user.email);
+      }
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
   }
 };
 
-export const logInWithEmailAndPassword = async (email, password) => {
+const logInWithEmailAndPassword = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    console.log("Signed in with Email and Password");
+    console.log("Signed in with email and password");
   } catch (error) {
-    console.error(error);
+    console.error("Caught error", error);
   }
 };
 
-export const createNewEmailAndPassword = async (email, password) => {
+const registerWithEmailAndPassword = async (name, email, password) => {
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    console.log("Created new email and password");
+    const res = await createUserWithEmailAndPassword(auth, email, password);
+    const user = res.user;
+    //create user document in firestore
+    await addDoc(collection(db, `users/${user.uid}/receipt`), {
+      uid: user.uid,
+      name,
+      authProvider: "local",
+      email,
+    });
+    console.log("Registered with email and password");
+    if (user.uid) {
+      console.log("User's name:", user.displayName);
+      if (onUserLoggedInDisplayCallback) {
+        onUserLoggedInDisplayCallback(user.displayName);
+      }
+    }
   } catch (error) {
-    console.error(error);
+    console.error("Caught error", error);
   }
 };
+
+const sendPasswordReset = async (email) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log("Password reset email sent");
+  } catch (error) {
+    console.error("Caught error", error);
+  }
+};
+
+const logOut = () => {
+  auth.signOut();
+};
+
+export {
+  auth,
+  db,
+  storage,
+  logInWithGoogle,
+  logInWithEmailAndPassword,
+  registerWithEmailAndPassword,
+  sendPasswordReset,
+  logOut,
+  setOnUserLoggedInDisplayCallback,
+  setOnUserLoggedInEmailCallback,
+};
+// Path: src/utils/algolia.js

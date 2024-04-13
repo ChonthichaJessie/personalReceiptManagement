@@ -15,7 +15,7 @@ const AlgoliaSearchLists = ({ searchClient, indexName }) => {
         <p>Category: {hit.category}</p>
         <button onClick={handleShowImage}>View receipt image</button>
         <p>Details: </p>
-        <ReceiptDetails data={hit.ocr_text} />
+        {hit.ocr_text && hit.ocr_text.length !== 0 ? <ReceiptDetails data={hit.ocr_text} /> : <p>"No data"</p>}
       </Receipt>
     );
   };
