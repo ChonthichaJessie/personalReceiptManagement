@@ -37,7 +37,7 @@ const setOnUserLoggedInEmailCallback = (callback) => {
 };
 
 export const resumeUser = () => {
-  const storedUser = localStorage.get("user");
+  const storedUser = localStorage.getItem("user");
   if (storedUser) {
     const user = JSON.parse(storedUser);
     if (user.displayName) {
