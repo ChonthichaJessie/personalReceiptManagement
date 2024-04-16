@@ -33,7 +33,9 @@ const Login = () => {
 
   return (
     <Wrapper>
+      <Welcome>Welcome to Receiptify</Welcome>
       <LoginContainer>
+        
         <LoginTextBox
           type="text"
           value={email}
@@ -68,6 +70,12 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Welcome = styled.h1`
+  margin-bottom: 20px;
 `;
 
 const LoginContainer = styled.div`

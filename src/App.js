@@ -13,13 +13,7 @@ import styled from "styled-components";
 // } from "firebase/storage";
 
 //Algolia Key - - Need to rebuild search bar
-import algoliasearch from "algoliasearch/lite";
-//import AlgoliaSearchLists from "./components/AlgoliaSearchLists";
-// import ImagePicker from "./components/ImagePicker";
-// import OcrDisplay from "./components/OcrDisplay";
-// import ImagesDisplay from "./components/ImagesDisplay";
-// import UploadReceipts from "./screens/UploadReceipt";
-import ReceiptsStorage from "./screens/ReceiptsStorage";
+import algoliasearch from "algoliasearch/lite"
 import Home from "./screens/Home";
 
 const { ALGOLIA_APP_ID, ALGOLIA_ADMIN_KEY, ALGOLIA_INDEX_NAME } = algoliaConfig;
@@ -42,11 +36,8 @@ const App = () => {
   return (
     <div>
       <div>
-        <h1>User Authentication</h1>
         <Home />
       </div>
-      {/* <UploadReceipts /> */}
-      <ReceiptsStorage />
 
       {/* {jsonData && (
         <div>

@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import { auth, db, logOut } from "../utils/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
-import { logInWithGoogle, setOnUserLoggedInDisplayCallback,setOnUserLoggedInEmailCallback } from "../utils/firebase";
+import {
+  logInWithGoogle,
+  setOnUserLoggedInDisplayCallback,
+  setOnUserLoggedInEmailCallback,
+} from "../utils/firebase";
 import UploadReceipts from "./UploadReceipt";
 import Login from "./Login";
+import ReceiptsStorage from "./ReceiptsStorage";
+
 
 const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
   const [name, setName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const navigate = useNavigate();
-  
-  // const fetchUserName = async () => {
-  //   try {
-  //     //const q = query(collection(db, user.email), where("uid", "==", user?.uid));
-  //     const q = query(collection(db, user.email));
-  //     const doc = await getDocs(q);
-  //     const data = doc.docs[0].data();
-  //     setName(data.name);
-  //   } catch (err) {
-  //     console.error(err);
-  //     alert("An error occured while fetching user data");
-  //   }
-  // };
 
   useEffect(() => {
     if (loading) {
@@ -39,7 +32,6 @@ const Dashboard = () => {
   }, [user, loading, navigate]);
 
   useEffect(() => {
-    // Set up a callback function to update the user's name when logged in with Google
     setOnUserLoggedInDisplayCallback((name) => {
       setName(name);
     });
@@ -51,11 +43,14 @@ const Dashboard = () => {
   return (
     <Wrapper>
       <DashboardContainer>
-      {name ? (
+        {name ? (
           <>
-            <Welcome>Welcome, {name}, {userEmail}</Welcome>
+            <Welcome>
+              Welcome, {name}, {userEmail}
+            </Welcome>
             <Btn onClick={logOut}>Logout</Btn>
-            <UploadReceipts userEmail={userEmail}/>
+            <UploadReceipts userEmail={userEmail} />
+            <ReceiptsStorage userEmail={userEmail} />
           </>
         ) : (
           <Login />
@@ -68,7 +63,7 @@ const Dashboard = () => {
 export default Dashboard;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   display: flex;
   align-items: center;

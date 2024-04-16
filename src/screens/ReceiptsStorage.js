@@ -1,14 +1,15 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { algoliaConfig } from "../utils/algolia";
 import styled from "styled-components";
 import algoliasearch from "algoliasearch/lite";
-import AlgoliaSearchLists from "../components/AlgoliaSearchLists";
+import AlgoliaSearchLists from "../components/algoliaSearchLists";
+import { Link } from "react-router-dom";
 
-const ReceiptsStorage = () => {
+const ReceiptsStorage = ({userEmail}) => {
+
   return (
     <div>
-      <h1>Receipts storage</h1>
-      <AlgoliaSearchLists />
+      <AlgoliaSearchLists userEmail={userEmail}/>
     </div>
   );
 };
