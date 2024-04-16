@@ -14,32 +14,36 @@ import {
 import ImagePicker from "../components/ImagePicker";
 import OcrDisplay from "../components/OcrDisplay";
 import ImagesDisplay from "../components/ImagesDisplay";
-import { setOnUserLoggedInEmailCallback } from "../utils/firebase";
+import {ocrVeryfiConfig} from "../utils/ocrVeryfi";
 
 const UploadReceipts = ({userEmail}) => {
   const [jsonData, setJsonData] = useState(null);
   const [receipt, setReceipt] = useState(receiptData);
   const [uid, setUid] = useState("");
-  // Algolia
+  const [localImages, setLocalImages] = useState([]);
+  const [fireImageURLs, setFireImageURLs] = useState(null);
+
+
 
   // const ocrFetching = async () => {
+  //   const { clientID, apiKey } = ocrVeryfiConfig;
   //   try {
   //     let data = JSON.stringify({
-  //       file_url:
-  //         "https://downloads.intercomcdn.com/i/o/531448844/04b5b529d5578dd603b48dee/cpg-receipt-grocery.jpg?expires=1711134631&signature=77a56224c6640186616ff6cb66a496393d3e76ea30b4f3e86525200ba4cf240f",
+  //       file_url: fireImageURLs[0],
+  //         // "https://downloads.intercomcdn.com/i/o/531448844/04b5b529d5578dd603b48dee/cpg-receipt-grocery.jpg?expires=1711134631&signature=77a56224c6640186616ff6cb66a496393d3e76ea30b4f3e86525200ba4cf240f",
   //     });
 
   //     let config = {
   //       method: "post",
   //       maxBodyLength: Infinity,
   //       url: "https://cors-anywhere.herokuapp.com/https://api.veryfi.com/api/v8/partner/documents",
-  //       Hide all of the keys and tokens
+  //       //Hide all of the keys and tokens
   //       headers: {
   //         "Content-Type": "application/json",
   //         Accept: "application/json",
-  //         "CLIENT-ID": "vrfWxnyNHLND0bWymAZBlTbWp6gzlfoPEdddlaj",
+  //         "CLIENT-ID": clientID,
   //         AUTHORIZATION:
-  //           "apikey chonthicha.pc:f3da01f277e17bc6bec576c280d1452f",
+  //           apiKey,
   //       },
   //       data: data,
   //     };
@@ -51,29 +55,12 @@ const UploadReceipts = ({userEmail}) => {
   //   }
   // };
 
-  const [localImages, setLocalImages] = useState([]);
-  const [fireImageURLs, setFireImageURLs] = useState(null);
-
+  
   const receiptDateJoinID =
     JSON.stringify(receipt.date) + JSON.stringify(receipt.id) + Math.random();
   const receiptNumber = receiptDateJoinID.replace(/[^a-zA-Z0-9]/g, "");
 
-  // const addImagesToFirestore = async () => {
-  //   try {
-  //     localImages.forEach(async (image, index) => {
-  //       const imageRef = storageRef(
-  //         storage,
-  //         `receipts/${receiptNumber}/image${index}`
-  //       );
-  //       await uploadBytes(imageRef, image);
-  //       const url = await getDownloadURL(imageRef);
-  //       setFireImageURLs(url);
-  //       console.log("Image uploaded to storage", url);
-  //     });
-  //   } catch (error) {
-  //     console.error("Error adding image to Firestore:", error);
-  //   }
-  // };
+ 
   const addImagesToFirestore = async () => {
     try {
       const imageURLs = await Promise.all(
@@ -115,6 +102,7 @@ const UploadReceipts = ({userEmail}) => {
 
   const uploadReceiptHandler = async () => {
     await addImagesToFirestore();
+    console.log("Images uploaded to storage", fireImageURLs);
     await addItemToFirestore();
   };
 

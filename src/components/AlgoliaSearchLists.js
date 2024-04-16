@@ -32,7 +32,7 @@ const Hit = ({ hit }) => {
 };
 
 const AlgoliaSearchLists = () => {
-  const email = "aa@gmail.com";
+  const email = "chonthicha.pc@gmail.com";
   const [search, setSearch] = useState("");
   const [hits, setHits] = useState([]);
 

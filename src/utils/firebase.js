@@ -61,6 +61,7 @@ const logInWithGoogle = async () => {
   provider.setCustomParameters({ prompt: "select_account" });
 
   try {
+    //set pesistence state
     await setPersistence(auth, browserLocalPersistence);
     console.log("setPersistence");
 
@@ -95,7 +96,7 @@ const logInWithEmailAndPassword = async (email, password) => {
   try {
     await setPersistence(auth, browserLocalPersistence);
     console.log("setPersistence");
-    
+
     await signInWithEmailAndPassword(auth, email, password);
     console.log("Signed in with email and password");
   } catch (error) {
