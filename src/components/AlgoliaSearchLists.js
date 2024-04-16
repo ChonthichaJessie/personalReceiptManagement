@@ -10,6 +10,27 @@ import ReceiptDetails from "./ReceiptDetails";
 import { algoliaConfig, searchClient } from "../utils/algolia";
 
 const index = searchClient.initIndex(algoliaConfig.ALGOLIA_INDEX_NAME);
+const Hit = ({ hit }) => {
+  const handleShowImage = () => {
+    window.open(hit.imageURLs, "_blank");
+  };
+  console.log("!!!", hit);
+  return (
+    <Receipt>
+      <p>Receipt ID: {hit.userEmail}</p>
+      <p>Receipt ID: {hit.objectID}</p>
+      <p>Purchase Date: {hit.date}</p>
+      <p>Category: {hit.category}</p>
+      <button onClick={handleShowImage}>View receipt image</button>
+      <p>Details: </p>
+      {hit.ocr_text?.length > 0 ? (
+        <ReceiptDetails data={hit.ocr_text} />
+      ) : (
+        <p>"No data"</p>
+      )}
+    </Receipt>
+  );
+};
 
 const AlgoliaSearchLists = () => {
   const email = "aa@gmail.com";
@@ -52,24 +73,3 @@ const Receipt = styled.div`
   margin-top: 48px;
 `;
 
-const Hit = ({ hit }) => {
-  const handleShowImage = () => {
-    window.open(hit.imageURLs, "_blank");
-  };
-  console.log("!!!", hit);
-  return (
-    <Receipt>
-      <p>Receipt ID: {hit.userEmail}</p>
-      <p>Receipt ID: {hit.objectID}</p>
-      <p>Purchase Date: {hit.date}</p>
-      <p>Category: {hit.category}</p>
-      <button onClick={handleShowImage}>View receipt image</button>
-      <p>Details: </p>
-      {hit.ocr_text?.length > 0 ? (
-        <ReceiptDetails data={hit.ocr_text} />
-      ) : (
-        <p>"No data"</p>
-      )}
-    </Receipt>
-  );
-};
