@@ -24,13 +24,7 @@ const Login = () => {
   }, [user, loading, navigate]);
 
   const handleGoogleLogin = async () => {
-    await logInWithGoogle();
-    // console.log('!!!', userName)
-    // if (userName) {
-    //   navigate("/dashboard", { state: { userName: userName } }); // Pass the user's name as state to the dashboard page
-    // } else {
-    //   console.log("User's name not available");
-    // }
+    await logInWithGoogle()
   };
 
   useEffect(() => {

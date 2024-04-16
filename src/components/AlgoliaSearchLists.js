@@ -14,7 +14,6 @@ const Hit = ({ hit }) => {
   const handleShowImage = () => {
     window.open(hit.imageURLs, "_blank");
   };
-  console.log("!!!", hit);
   return (
     <Receipt>
       <p>Receipt ID: {hit.userEmail}</p>

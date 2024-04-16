@@ -6,6 +6,7 @@ import { auth, db, logOut } from "../utils/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { logInWithGoogle, setOnUserLoggedInDisplayCallback,setOnUserLoggedInEmailCallback } from "../utils/firebase";
 import UploadReceipts from "./UploadReceipt";
+import Login from "./Login";
 
 const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -57,7 +58,7 @@ const Dashboard = () => {
             <UploadReceipts userEmail={userEmail}/>
           </>
         ) : (
-          <Btn onClick={logInWithGoogle}>Log in with Google</Btn>
+          <Login />
         )}
       </DashboardContainer>
     </Wrapper>

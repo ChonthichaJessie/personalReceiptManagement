@@ -8,6 +8,10 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   sendPasswordResetEmail,
+  setPersistence,
+  browserSessionPersistence,
+  browserLocalPersistence,
+  inMemoryPersistence,
 } from "firebase/auth";
 import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
 
@@ -55,7 +59,11 @@ const logInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   //user can choose account
   provider.setCustomParameters({ prompt: "select_account" });
+
   try {
+    await setPersistence(auth, browserLocalPersistence);
+    console.log("setPersistence");
+
     const res = await signInWithPopup(auth, provider);
     const user = res.user;
     localStorage.setItem("user", JSON.stringify(user));
@@ -85,6 +93,9 @@ const logInWithGoogle = async () => {
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
+    await setPersistence(auth, browserLocalPersistence);
+    console.log("setPersistence");
+    
     await signInWithEmailAndPassword(auth, email, password);
     console.log("Signed in with email and password");
   } catch (error) {
