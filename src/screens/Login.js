@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, signInWithEmailAndPassword, signInWithGoogle,logInWithGoogle,logInWithEmailAndPassword } from "../utils/firebase";
+import {
+  auth,
+  logInWithGoogle,
+  logInWithEmailAndPassword,
+  resumeUser,
+} from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import styled from "styled-components";
 
@@ -16,16 +21,21 @@ const Login = () => {
       return;
     }
     if (user) navigate("/dashboard");
-  }, [user, loading,navigate]);
+  }, [user, loading, navigate]);
 
   const handleGoogleLogin = async () => {
-    const userName = await logInWithGoogle();
-    if (userName) {
-      navigate("/dashboard", { state: { userName: userName } }); // Pass the user's name as state to the dashboard page
-    } else {
-      console.log("User's name not available");
-    }
+    await logInWithGoogle();
+    // console.log('!!!', userName)
+    // if (userName) {
+    //   navigate("/dashboard", { state: { userName: userName } }); // Pass the user's name as state to the dashboard page
+    // } else {
+    //   console.log("User's name not available");
+    // }
   };
+
+  useEffect(() => {
+    resumeUser();
+  }, []);
 
   return (
     <Wrapper>

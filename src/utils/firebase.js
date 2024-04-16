@@ -36,6 +36,21 @@ const setOnUserLoggedInEmailCallback = (callback) => {
   onUserLoggedInEmailCallback = callback;
 };
 
+export const resumeUser = () => {
+  const storedUser = localStorage.get("user");
+  if (storedUser) {
+    const user = JSON.parse(storedUser);
+    if (user.displayName) {
+      console.log("User's name:", user.displayName);
+      onUserLoggedInDisplayCallback?.(user.displayName);
+    }
+    if (user.email) {
+      console.log("User's email:", user.email);
+      onUserLoggedInEmailCallback?.(user.email);
+    }
+  }
+};
+
 const logInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   //user can choose account
@@ -43,6 +58,7 @@ const logInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, provider);
     const user = res.user;
+    localStorage.setItem("user", JSON.stringify(user));
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
@@ -55,15 +71,11 @@ const logInWithGoogle = async () => {
     }
     if (user.displayName) {
       console.log("User's name:", user.displayName);
-      if (onUserLoggedInDisplayCallback) {
-        onUserLoggedInDisplayCallback(user.displayName);
-      }
+      onUserLoggedInDisplayCallback?.(user.displayName);
     }
     if (user.email) {
       console.log("User's email:", user.email);
-      if (onUserLoggedInEmailCallback) {
-        onUserLoggedInEmailCallback(user.email);
-      }
+      onUserLoggedInEmailCallback?.(user.email);
     }
   } catch (err) {
     console.error(err);

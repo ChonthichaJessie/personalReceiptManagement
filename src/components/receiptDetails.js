@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ReceiptDetails = ({ data }) => {
   return (
     <Wrapper>
-        <p style={{ height: 168, width: 200, overflowY: "auto" }}>{data}</p>
+        {data && data.length !== 0 ? <p style={{ height: 168, width: 200, overflowY: "auto" }}>{data}</p> : <p>"No data"</p>}
     </Wrapper>
   );
 };
