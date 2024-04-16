@@ -1,24 +1,24 @@
 import React, { useMemo, useState } from "react";
 //import axios from "axios";
 import { useEffect } from "react";
-import { setDoc, doc } from "firebase/firestore";
-import { db, storage } from "./utils/firebase";
+// import { setDoc, doc } from "firebase/firestore";
+// import { db, storage } from "./utils/firebase";
 import receiptData from "./ReceiptData.json";
 import { algoliaConfig } from "./utils/algolia";
 import styled from "styled-components";
-import {
-  getDownloadURL,
-  ref as storageRef,
-  uploadBytes,
-} from "firebase/storage";
+// import {
+//   getDownloadURL,
+//   ref as storageRef,
+//   uploadBytes,
+// } from "firebase/storage";
 
 //Algolia Key - - Need to rebuild search bar
 import algoliasearch from "algoliasearch/lite";
-import AlgoliaSearchLists from "./components/AlgoliaSearchLists";
-import ImagePicker from "./components/ImagePicker";
-import OcrDisplay from "./components/OcrDisplay";
-import ImagesDisplay from "./components/ImagesDisplay";
-import UploadReceipts from "./screens/UploadReceipt";
+//import AlgoliaSearchLists from "./components/AlgoliaSearchLists";
+// import ImagePicker from "./components/ImagePicker";
+// import OcrDisplay from "./components/OcrDisplay";
+// import ImagesDisplay from "./components/ImagesDisplay";
+// import UploadReceipts from "./screens/UploadReceipt";
 import ReceiptsStorage from "./screens/ReceiptsStorage";
 import Home from "./screens/Home";
 
