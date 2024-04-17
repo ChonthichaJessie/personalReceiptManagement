@@ -24,7 +24,7 @@ const Login = () => {
   }, [user, loading, navigate]);
 
   const handleGoogleLogin = async () => {
-    await logInWithGoogle()
+    await logInWithGoogle();
   };
 
   useEffect(() => {
@@ -35,7 +35,6 @@ const Login = () => {
     <Wrapper>
       <Welcome>Welcome to Receiptify</Welcome>
       <LoginContainer>
-        
         <LoginTextBox
           type="text"
           value={email}
@@ -65,50 +64,63 @@ const Login = () => {
 export default Login;
 
 const Wrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  background-image: url("/background/Background.png");
 `;
 
-const Welcome = styled.h1`
-  margin-bottom: 20px;
+const Welcome = styled.text`
+  font-size: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
 `;
 
 const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background-color: white;
+  border-radius: 24px;
+  width: 400px;
   padding: 30px;
 `;
 
 const LoginTextBox = styled.input`
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  border-color: transparent;
 `;
 
 const LoginBtn = styled.button`
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+  padding: 16px;
+  font-size: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
   border: none;
   color: white;
-  background-color: black;
+  background-image: url("/background/Background.png");
 `;
 
 const LoginGoogle = styled.button`
-  background-color: #4285f4;
+  padding: 16px;
+  font-size: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-image: url("/background/Background.png");
 `;
 
 const LoginLink = styled.div`
-  margin-top: 7px;
-`;
-
-const NoAccount = styled.div`
-  margin-top: 7px;
+  margin-top: 16px;
+  font-size: 16px;
 `;

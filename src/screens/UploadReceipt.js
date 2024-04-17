@@ -19,7 +19,9 @@ const UploadReceipts = ({ userEmail }) => {
   //   JSON.stringify(receipt.date) + JSON.stringify(receipt.id) + Math.random();
 
   const storeAndConvertReceipt = async () => {
-    const { receiptNumber, imageURL } = await uploadImageToFirestore(localImage);
+    const { receiptNumber, imageURL } = await uploadImageToFirestore(
+      localImage
+    );
     setReceiptNo(receiptNumber);
     setFireImageURL(imageURL);
     console.log("Image uploaded to storage", imageURL);
@@ -30,7 +32,7 @@ const UploadReceipts = ({ userEmail }) => {
 
   return (
     <div>
-      <h1>Upload new receipt</h1>
+      <Header>Add New Receipt</Header>
       <ImagePicker onPickImage={setLocalImage} />
       <Display>
         {!!localImage && (
@@ -58,4 +60,10 @@ const Display = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 16px;
+`;
+
+const Header = styled.text`
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: white;
 `;

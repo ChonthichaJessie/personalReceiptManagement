@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate, Link, BrowserRouter } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { auth, db, logOut } from "../utils/firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
+import { auth, logOut } from "../utils/firebase";
 import {
-  logInWithGoogle,
   setOnUserLoggedInDisplayCallback,
   setOnUserLoggedInEmailCallback,
 } from "../utils/firebase";
@@ -13,9 +11,8 @@ import UploadReceipts from "./UploadReceipt";
 import Login from "./Login";
 import ReceiptsStorage from "./ReceiptsStorage";
 
-
 const Dashboard = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const navigate = useNavigate();
@@ -45,10 +42,10 @@ const Dashboard = () => {
       <DashboardContainer>
         {name ? (
           <>
-            <Welcome>
-              Welcome, {name}, {userEmail}
-            </Welcome>
-            <Btn onClick={logOut}>Logout</Btn>
+            <Top>
+              <Welcome>Welcome, {name}</Welcome>
+              <Btn onClick={logOut}>Logout</Btn>
+            </Top>
             <UploadReceipts userEmail={userEmail} />
             <ReceiptsStorage userEmail={userEmail} />
           </>
@@ -63,28 +60,39 @@ const Dashboard = () => {
 export default Dashboard;
 
 const Wrapper = styled.div`
-  /* height: 100vh; */
-  width: 100vw;
+  width: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 `;
 
 const DashboardContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
   padding: 30px;
+  width: 100%;
+  background-color: transparent;
 `;
 
-const Welcome = styled.h1`
-  margin-bottom: 20px;
+const Top = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Welcome = styled.text`
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
 `;
 const Btn = styled.button`
-  padding: 10px;
-  font-size: 18px;
-  background-color: red;
+  padding: 16px;
+  font-size: 24px;
+  background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;

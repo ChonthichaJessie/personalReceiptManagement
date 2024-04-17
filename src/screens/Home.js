@@ -4,7 +4,7 @@ import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ReceiptsStorage from "./ReceiptsStorage";
-
+import styled from "styled-components";
 const Home = () => {
   return (
     <div>
@@ -21,3 +21,5 @@ const Home = () => {
   );
 };
 export default Home;
+
+
