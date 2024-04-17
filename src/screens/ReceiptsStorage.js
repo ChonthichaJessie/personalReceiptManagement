@@ -1,17 +1,19 @@
-import React, { useMemo, useState, useEffect } from "react";
-import { algoliaConfig } from "../utils/algolia";
-import styled from "styled-components";
-import algoliasearch from "algoliasearch/lite";
+import React from "react";
 import AlgoliaSearchLists from "../components/algoliaSearchLists";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const ReceiptsStorage = ({userEmail}) => {
 
   return (
-    <div>
+    <Wrapper>
       <AlgoliaSearchLists userEmail={userEmail}/>
-    </div>
+    </Wrapper>
   );
 };
 
 export default ReceiptsStorage;
+
+const Wrapper = styled.div`
+  
+  padding-top: 48px;
+`;

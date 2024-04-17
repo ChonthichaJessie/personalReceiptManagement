@@ -52,24 +52,34 @@ const ResetContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #dcdcdc;
+  background-color: white;
+  border-radius: 24px;
+  width: 400px;
   padding: 30px;
 `;
 
 const ResetTextBox = styled.input`
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+font-family: "Times New Roman", Times, serif;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 16px;
+  border: none;
 `;
 
 const ResetBtn = styled.button`
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
+font-family: "Times New Roman", Times, serif;
+  padding: 16px;
+  font-size: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
   border: none;
   color: white;
-  background-color: black;
+  background-image: url("/background/Background.png");
+  cursor: pointer;
 `;
 const NoAccount = styled.div`
-  margin-top: 7px;
+  font-size: 16px;
+  margin-bottom: 16px;
 `;

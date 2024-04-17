@@ -33,7 +33,12 @@ const Login = () => {
 
   return (
     <Wrapper>
+      <WelcomeWrapper>
+      <img src="/background/Cat_Paw_Small_05.png" alt="cat paw" height="60px" />
       <Welcome>Welcome to Receiptify</Welcome>
+      <img src="/background/Cat_Paw_Small_05.png" alt="cat paw" height="60px" />
+      </WelcomeWrapper>
+      
       <LoginContainer>
         <LoginTextBox
           type="text"
@@ -48,7 +53,7 @@ const Login = () => {
           placeholder="Password"
         />
         <LoginBtn onClick={() => logInWithEmailAndPassword(email, password)}>
-          Login
+          Login with Email
         </LoginBtn>
         <LoginGoogle onClick={handleGoogleLogin}>Login with Google</LoginGoogle>
         <LoginLink>
@@ -58,25 +63,44 @@ const Login = () => {
           Don't have an account? <Link to="/Register">Register</Link> now.
         </LoginLink>
       </LoginContainer>
+      <CatsDecorationBottom>
+        <img src="/background/Cat_Face_04.png" alt="cat paw" height="240px" />
+        <img src="/background/Cat_Face_01.png" alt="cat paw" height="240px" />
+        <img src="/background/Cat_Face_05.png" alt="cat paw" height="240px" />
+        <img src="/background/Cat_Face_02.png" alt="cat paw" height="240px" />
+      </CatsDecorationBottom>
     </Wrapper>
   );
 };
 export default Login;
 
+const CatsDecorationBottom = styled.div`
+padding-top: 48px;
+display: flex;
+flex-direction: row;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   flex-direction: column;
   background-image: url("/background/Background.png");
 `;
 
+const WelcomeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+`;
+
 const Welcome = styled.text`
-  font-size: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  font-size: 48px;
   color: white;
+  padding-left: 16px;
+  padding-right: 16px;
 `;
 
 const LoginContainer = styled.div`
@@ -90,17 +114,17 @@ const LoginContainer = styled.div`
 `;
 
 const LoginTextBox = styled.input`
+font-family: "Times New Roman", Times, serif;
   padding-top: 16px;
   padding-bottom: 16px;
   font-size: 24px;
   color: gray;
   margin-bottom: 16px;
-  border-radius: 8px;
-  margin-top: 16px;
-  border-color: transparent;
+  border: none;
 `;
 
 const LoginBtn = styled.button`
+font-family: "Times New Roman", Times, serif;
   padding: 16px;
   font-size: 24px;
   margin-bottom: 24px;
@@ -108,9 +132,11 @@ const LoginBtn = styled.button`
   border: none;
   color: white;
   background-image: url("/background/Background.png");
+  cursor: pointer;
 `;
 
 const LoginGoogle = styled.button`
+  font-family: "Times New Roman", Times, serif;
   padding: 16px;
   font-size: 24px;
   margin-bottom: 24px;
@@ -118,9 +144,10 @@ const LoginGoogle = styled.button`
   border: none;
   color: white;
   background-image: url("/background/Background.png");
+  cursor: pointer;
 `;
 
 const LoginLink = styled.div`
-  margin-top: 16px;
   font-size: 16px;
+  margin-bottom: 16px;
 `;

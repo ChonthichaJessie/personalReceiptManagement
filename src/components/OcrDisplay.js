@@ -14,14 +14,17 @@ const OcrDisplay = ({ data }) => {
 export default OcrDisplay;
 
 const Wrapper = styled.div`
-padding-top: 8px;
+  background-color: white;
+  border: solid 8px #bcbcbc;
+  border-radius: 24px;
+  padding-top: 8px;
   padding-bottom: 8px;
-  width: 40%;
+  width: 50%;
   margin-left: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   height: 500px;
-  background-color: #CEA2FD;
   
 `;

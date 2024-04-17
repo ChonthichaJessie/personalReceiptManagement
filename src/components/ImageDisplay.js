@@ -21,10 +21,12 @@ const ImageDisplay = ({ imageURL }) => {
 export default ImageDisplay;
 
 const Wrapper = styled.div`
-  background-color: #663399;
+  background-color: white;
+  border: solid 8px #bcbcbc;
+  border-radius: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 60%;
+  width: 50%;
   margin-left: 16px;
   display: flex;
   flex-wrap: wrap;

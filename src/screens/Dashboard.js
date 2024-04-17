@@ -43,8 +43,27 @@ const Dashboard = () => {
         {name ? (
           <>
             <Top>
-              <Welcome>Welcome, {name}</Welcome>
-              <Btn onClick={logOut}>Logout</Btn>
+              <WelcomeWrapper>
+                <img
+                  src="/background/Cat_Face_07.png"
+                  alt="cat paw"
+                  height="100px"
+                />
+                <WelcomeTextWrapper>
+                <Welcome>Welcome</Welcome>
+                <Welcome>{name}</Welcome>
+                </WelcomeTextWrapper>
+                
+              </WelcomeWrapper>
+              <LogoutWrapper>
+              <img
+                  src="/background/Cat_Paw_Small_05.png"
+                  alt="cat paw"
+                  height="50px"
+                />
+                <LogOut onClick={logOut}>Logout</LogOut>
+                
+              </LogoutWrapper>
             </Top>
             <UploadReceipts userEmail={userEmail} />
             <ReceiptsStorage userEmail={userEmail} />
@@ -84,17 +103,33 @@ const Top = styled.div`
 `;
 
 const Welcome = styled.text`
-  font-size: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  font-size: 48px;
   color: white;
 `;
-const Btn = styled.button`
-  padding: 16px;
+const WelcomeTextWrapper = styled.div`
+padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  `;
+
+const WelcomeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const LogOut = styled.label`
   font-size: 24px;
-  background-color: transparent;
+  padding-left: 8px;
   color: white;
   border: none;
   cursor: pointer;
+  background-color: url("/background/Cat_Paw_02.png");;
+`;
+
+const LogoutWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 // Path: src/screens/Reset.js
