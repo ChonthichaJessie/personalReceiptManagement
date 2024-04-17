@@ -34,7 +34,7 @@ const UploadReceipts = ({ userEmail }) => {
     <div>
       <TopWrapper>
         <Top>
-          <Header>Let's Upload New Receipt</Header>
+          <Header>Let's Upload A New Receipt</Header>
           <ImagePickerWrapper>
             <ImagePicker onPickImage={setLocalImage} />
           </ImagePickerWrapper>
