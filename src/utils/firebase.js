@@ -1,6 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getFirestore, setDoc, doc } from "firebase/firestore";
+import {
+  getStorage,
+  getDownloadURL,
+  ref as storageRef,
+  uploadBytes,
+} from "firebase/storage";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -9,9 +14,7 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail,
   setPersistence,
-  browserSessionPersistence,
   browserLocalPersistence,
-  inMemoryPersistence,
 } from "firebase/auth";
 import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
 
@@ -138,6 +141,43 @@ const sendPasswordReset = async (email) => {
 
 const logOut = () => {
   auth.signOut();
+};
+
+export const uploadImageToFirestore = async (localImage) => {
+  const receiptNumber = Math.random().toString();
+  try {
+    const imageRef = storageRef(storage, `receipts/${receiptNumber}/image0`);
+    await uploadBytes(imageRef, localImage);
+    const imageURL = await getDownloadURL(imageRef);
+    console.log("imageRef", imageRef);
+    console.log("localImage", localImage);
+    console.log("Image uploaded to storage", imageURL);
+    return { receiptNumber, imageURL };
+  } catch (error) {
+    console.error("Error adding images to Firestore:", error);
+  }
+};
+
+export const saveReceiptToFirestore = async (
+  receiptNum,
+  receipt,
+  imageUrl,
+  userEmail
+) => {
+  try {
+    //cannot add user email to receipt object
+    const receiptWithImageURLs = {
+      ...receipt,
+      imageURLs: [imageUrl],
+      userEmail,
+    };
+    console.log(receiptWithImageURLs);
+    console.log("Receipt with image URLs", receiptWithImageURLs);
+    await setDoc(doc(db, "users", receiptNum), receiptWithImageURLs);
+    console.log("Submitted to Firestore");
+  } catch (error) {
+    console.error("Error adding item to Firestore:", error);
+  }
 };
 
 export {

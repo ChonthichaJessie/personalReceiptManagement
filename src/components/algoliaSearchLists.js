@@ -16,7 +16,7 @@ const Hit = ({ hit }) => {
   };
   return (
     <Receipt>
-      <p>Receipt ID: {hit.userEmail}</p>
+      <p>Receipt userEmail: {hit.userEmail}</p>
       <p>Receipt ID: {hit.objectID}</p>
       <p>Purchase Date: {hit.date}</p>
       <p>Category: {hit.category}</p>
@@ -31,7 +31,7 @@ const Hit = ({ hit }) => {
   );
 };
 
-const AlgoliaSearchLists = ({userEmail}) => {
+const AlgoliaSearchLists = ({ userEmail }) => {
   const [search, setSearch] = useState("");
   const [hits, setHits] = useState([]);
 
@@ -54,7 +54,7 @@ const AlgoliaSearchLists = ({userEmail}) => {
       <input type="text" onChange={(e) => setSearch(e.currentTarget.value)} />
       <button onClick={doSearch}>Search</button>
       {hits.map((hit) => (
-        <Hit hit={hit} />
+        <Hit hit={hit} key={hit.objectID} />
       ))}
       {/* <InstantSearch searchClient={searchClient} indexName={indexName}>
         <SearchBox placeholder={"search your receipt info"}></SearchBox>

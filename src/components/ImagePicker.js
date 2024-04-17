@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const ImagePicker = ({ onPickImages }) => {
+const ImagePicker = ({ onPickImage }) => {
   const onImageChange = (e) => {
     if (e.target.files.length) {
-      onPickImages([...e.target.files]);
+      onPickImage(e.target.files[0]);
+
     }
   };
 
@@ -13,7 +14,6 @@ const ImagePicker = ({ onPickImages }) => {
       <FilesInput
         type="file"
         onChange={onImageChange}
-        multiple
         accept="image/*"
       />
     </div>
