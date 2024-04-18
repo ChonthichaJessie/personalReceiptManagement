@@ -1,10 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-// import {
-//   InstantSearch,
-//   SearchBox,
-//   Hits,
-//   RefinementList,
-// } from "react-instantsearch";
 import styled from "styled-components";
 import ReceiptDetails from "./ReceiptDetails";
 import { algoliaConfig, searchClient } from "../utils/algolia";
@@ -22,16 +16,31 @@ const Hit = ({ hit }) => {
           <ReceiptIDWrappoer>
             <ReceiptInfo>Receipt ID: {hit.objectID}</ReceiptInfo>
           </ReceiptIDWrappoer>
-          <ReceiptInfo>Purchase Date: {hit.date}</ReceiptInfo>
-          <ReceiptInfo>Category: {hit.category}</ReceiptInfo>
-          <ButtonWrapper>
+          <ContentWrapper>
             <img
               src="/background/Cat_Paw_Small_07.png"
               alt="cat paw"
               height="20px"
             />
+            <ReceiptInfo>Purchase Date: {hit.date}</ReceiptInfo>
+          </ContentWrapper>
+          <ContentWrapper>
+            <img
+              src="/background/Cat_Paw_Small_07.png"
+              alt="cat paw"
+              height="20px"
+            />
+            <ReceiptInfo>Category: {hit.category}</ReceiptInfo>
+          </ContentWrapper>
+
+          <ContentWrapper>
+            <img
+              src="/background/Cat_Face_03.png"
+              alt="cat paw"
+              height="30px"
+            />
             <Btn onClick={handleShowImage}>View receipt image</Btn>
-          </ButtonWrapper>
+          </ContentWrapper>
         </ReceiptDetailsLH>
         <ReceiptDetailsRH>
           <ReceiptInfo>Details: </ReceiptInfo>
@@ -66,8 +75,12 @@ const AlgoliaSearchLists = ({ userEmail }) => {
 
   return (
     <div>
-      <SearchBar type="text" onChange={(e) => setSearch(e.currentTarget.value)} placeholder="Search your receipts"/>
-      <button onClick={doSearch} hidden/>
+      <SearchBar
+        type="text"
+        onChange={(e) => setSearch(e.currentTarget.value)}
+        placeholder="Search your receipts"
+      />
+      <button onClick={doSearch} hidden />
       {hits.map((hit) => (
         <Hit hit={hit} key={hit.objectID} />
       ))}
@@ -85,7 +98,7 @@ const SearchBar = styled.input`
   margin-right: 16px;
   padding-left: 16px;
   font-size: 18px;
-  `
+`;
 
 const Receipt = styled.div`
   margin-top: 48px;
@@ -100,12 +113,14 @@ const ReceiptIDWrappoer = styled.div`
   display: flex;
   flex-direction: row;
   width: 480px;
+  padding-bottom: 16px;
+  font-weight: 600;
 `;
 const ReceiptInfo = styled.text`
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
-  padding-bottom: 16px;
   color: white;
+  padding-left: 8px;
 `;
 const ReceiptDetailsWrapper = styled.div`
   display: flex;
@@ -123,10 +138,11 @@ const ReceiptDetailsRH = styled.div`
   flex-direction: column;
 `;
 
-const ButtonWrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 16px;
 `;
 const Btn = styled.button`
   font-family: "Times New Roman", Times, serif, Helvetica, sans-serif;
@@ -136,4 +152,7 @@ const Btn = styled.button`
   color: white;
   background-color: transparent;
   cursor: pointer;
+  &:hover {
+    color: #e582c2;
+  }
 `;
