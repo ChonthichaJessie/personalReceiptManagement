@@ -4,7 +4,7 @@ import styled from "styled-components";
 const OcrDisplay = ({ data }) => {
   return (
     <Wrapper>
-      {data.length > 0 && (
+      {!!data?.length && (
         <pre style={{ height: 480, width: 300, overflowY: "auto" }}>{data}</pre>
       )}
     </Wrapper>

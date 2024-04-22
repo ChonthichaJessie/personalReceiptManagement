@@ -29,8 +29,9 @@ export const performOcr = async (imageUrl) => {
     };
 
     const response = await axios(config);
-    return response.data;
+    return response.data ?? {}
   } catch (error) {
     console.log(error);
+    return {}
   }
 };
