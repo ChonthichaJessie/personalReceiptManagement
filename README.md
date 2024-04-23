@@ -16,9 +16,9 @@ Algolia search has been linked to the FirebaseDatabase extension. Then we can ut
 VeryFi OCR API offers free hitting API 50 times per month. This month, I've already spent 20 hits.  Thus, try not to use that function excessively and be considerate to let others enjoy it as well.
 There is still lots of room for improvement. I'm currently working on this app.
 
-# Live demo: https://personal-receipt-management.vercel.app/
+## Live demo: https://personal-receipt-management.vercel.app/
 
-# Developer: Jessie Chonthicha
+## Developer: Jessie Chonthicha
 
 # Getting Started with Create React App
 
