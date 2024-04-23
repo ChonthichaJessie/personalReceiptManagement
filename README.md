@@ -1,3 +1,25 @@
+# Receiptify Application
+
+Reciptify offers services for storing users' receipt information. Users can upload receipt images, and the application converts them to JSON data and stores them in the Firebase database. Then, users can search for any information in the uploaded receipts and view the receipt's data, including its photo.
+
+## Technology Using
+Firestore database, Firebase storage, Firebase Authentication, Verify Lens API (OCR Technology), Algoria API for substring searching
+
+## Architecture brifly description
+Reciptify begins the process by requesting the user to log in from <Login/> on Dashboard screen. Then it retrieves the user's name and email address from Firebase authentication (Google authentication and EmailPassword authentication), and passes both data to other components such as uploading photos to FirebaseStorage, uploading json receipt data to FiredatabaseDatabase, and setting up an AlgoliaSearching (substring searching API) fliter index for this user's email only.
+
+After logging in, customers need to pick a receipt image from their devices, which can then be converted to text. The transformed text data will be displayed beside the chosen image. The process begins with uploading a photo to FirebaseStorage, followed by retrieving an imageURL from Firestore and passing it to the VeryFi OCR API for conversion to JSON data. Next, it retrieves OCR json data and adds three additional fields, including user email, imageURL, and receipt id, for use in Algolia searches. Then users can save all of data to FirebaseDatabase.
+
+Algolia search has been linked to the FirebaseDatabase extension. Then we can utilize built-in functions like "Hits" to display search indexes retrieved from Firebase. However, because all users are in the same database, Algolia will display information about other users as well. So, we only need to add filter index data from this logged-in user. That is why I include a user email field in each receipt json before uploading it to FirebaseDatabase. Use this field to filter the Algolia index.
+
+## Author's message
+VeryFi OCR API offers free hitting API 50 times per month. This month, I've already spent 20 hits.  Thus, try not to use that function excessively and be considerate to let others enjoy it as well.
+There is still lots of room for improvement. I'm currently working on this app.
+
+# Live demo: https://personal-receipt-management.vercel.app/
+
+# Developer: Jessie Chonthicha
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -11,60 +33,4 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
