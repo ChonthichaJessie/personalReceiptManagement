@@ -1,12 +1,5 @@
 const axios = require("axios");
 
-const ocrVeryfiConfig = {
-  clientID: process.env.REACT_APP_VERYFI_CLIENT_ID,
-  apiKey: process.env.REACT_APP_VERYFI_API_KEY,
-};
-
-console.log(ocrVeryfiConfig);
-
 const {onRequest} = require("firebase-functions/v2/https");
 
 // eslint-disable-next-line max-len
@@ -39,10 +32,9 @@ exports.performOcr = onRequest(
           headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "CLIENT-ID": process.env.REACT_APP_VERYFI_CLIENT_ID,
-            // eslint-disable-next-line max-len
+            "CLIENT-ID": process.env.VERYFI_CLIENT_ID,
             "AUTHORIZATION":
-            process.env.REACT_APP_VERYFI_API_KEY,
+            process.env.VERYFI_API_KEY,
           },
           data: data,
         };
@@ -62,7 +54,9 @@ exports.performOcr = onRequest(
         response.header("Access-Control-Allow-Headers", "Content-Type");
         response.send({
           // eslint-disable-next-line max-len
-          error: "Error in OCR Veryfi API call-indirect OCR Key" + error.message,
+          "error": "Error in OCR Veryfi API call-indirect OCR Key" + error.message,
+          // eslint-disable-next-line max-len
+          "CLIENT-ID": process.env.VERYFI_CLIENT_ID, "AUTHORIZATION": process.env.VERYFI_API_KEY,
         });
       }
     },
