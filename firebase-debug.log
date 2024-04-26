@@ -1,0 +1,1923 @@
+[debug] [2024-04-23T22:27:46.044Z] ----------------------------------------------------------------------
+[debug] [2024-04-23T22:27:46.046Z] Command:       /Users/jung/.nvm/versions/node/v18.19.1/bin/node /Users/jung/.nvm/versions/node/v18.19.1/bin/firebase emulators:start
+[debug] [2024-04-23T22:27:46.046Z] CLI Version:   13.7.3
+[debug] [2024-04-23T22:27:46.047Z] Platform:      darwin
+[debug] [2024-04-23T22:27:46.047Z] Node Version:  v18.19.1
+[debug] [2024-04-23T22:27:46.048Z] Time:          Tue Apr 23 2024 16:27:46 GMT-0600 (Mountain Daylight Saving Time)
+[debug] [2024-04-23T22:27:46.048Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-23T22:27:46.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-23T22:27:46.160Z] > authorizing via signed-in user (chonthicha.pc@gmail.com)
+[debug] [2024-04-23T22:27:46.230Z] java version "19.0.2" 2023-01-17
+
+[debug] [2024-04-23T22:27:46.231Z] Java(TM) SE Runtime Environment (build 19.0.2+7-44)
+Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
+
+[debug] [2024-04-23T22:27:46.234Z] Parsed Java major version: 19
+[info] i  emulators: Starting emulators: functions, firestore {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore"}}
+[debug] [2024-04-23T22:27:47.885Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-23T22:27:47.885Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-23T22:27:47.885Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-23T22:27:47.885Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project receiptmanagement-1d51d. This may result in unexpected behavior. 
+[debug] [2024-04-23T22:27:47.891Z] [hub] writing locator at /var/folders/zm/1s7xcq7s3rg1qrw0vhtcgst40000gn/T/hub-receiptmanagement-1d51d.json
+[debug] [2024-04-23T22:27:48.545Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-23T22:27:48.545Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-23T22:27:48.545Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-04-23T22:27:48.547Z] defaultcredentials: writing to file /Users/jung/.config/firebase/chonthicha_pc_gmail.com_application_default_credentials.json
+[debug] [2024-04-23T22:27:48.553Z] Setting GAC to /Users/jung/.config/firebase/chonthicha_pc_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/jung/.config/firebase/chonthicha_pc_gmail.com_application_default_credentials.json"}}
+[debug] [2024-04-23T22:27:48.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/receiptmanagement-1d51d/adminSdkConfig [none]
+[debug] [2024-04-23T22:27:49.111Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/receiptmanagement-1d51d/adminSdkConfig 200
+[debug] [2024-04-23T22:27:49.111Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/receiptmanagement-1d51d/adminSdkConfig {"projectId":"receiptmanagement-1d51d","storageBucket":"receiptmanagement-1d51d.appspot.com","locationId":"us-central"}
+[info] i  firestore: downloading cloud-firestore-emulator-v1.19.4.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.19.4.jar..."}}
+[debug] [2024-04-23T22:27:49.149Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar 
+[debug] [2024-04-23T22:27:49.459Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar 200
+[debug] [2024-04-23T22:27:49.459Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.4.jar [stream]
+[debug] [2024-04-23T22:27:51.804Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-23T22:27:51.805Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-04-23T22:27:51.805Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/jung/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.4.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","receiptmanagement-1d51d","--rules","/Users/jung/work/personalReceiptManagement/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/jung/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.4.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"receiptmanagement-1d51d\",\"--rules\",\"/Users/jung/work/personalReceiptManagement/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2024-04-23T22:27:52.878Z] Apr 23, 2024 4:27:52 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 23, 2024 4:27:52 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-04-23T22:27:52.897Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-04-23T22:27:52.898Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-04-23T22:27:53.081Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-04-23T22:27:53.081Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-04-23T22:27:53.082Z] Starting Emulator UI with command {"binary":"node","args":["/Users/jung/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/jung/.cache/firebase/emulators/ui-v1.11.8/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-04-23T22:27:53.241Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-04-23T22:27:53.241Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/jung/work/personalReceiptManagement/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/jung/work/personalReceiptManagement/functions\" for Cloud Functions..."}}
+[debug] [2024-04-23T22:27:53.341Z] Validating nodejs source
+[debug] [2024-04-23T22:27:55.215Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-23T22:27:55.216Z] Building nodejs source
+[debug] [2024-04-23T22:27:55.216Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-23T22:27:55.219Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-23T22:27:55.229Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8526
+
+[debug] [2024-04-23T22:27:55.823Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/receiptmanagement-1d51d/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/receiptmanagement-1d51d/us-central1/helloWorld)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-04-23T22:27:59.680Z] Apr 23, 2024 4:27:59 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 23, 2024 4:27:59 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-23T22:37:51.381Z] Apr 23, 2024 4:37:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 23, 2024 4:37:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-23T22:38:01.925Z] Apr 23, 2024 4:38:01 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 23, 2024 4:38:01 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T15:35:15.138Z] Apr 24, 2024 9:35:15 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 9:35:15 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T16:13:06.323Z] Apr 24, 2024 10:13:06 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 24, 2024 10:13:06 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:13:06 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 24, 2024 10:13:06 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T16:13:12.701Z] Apr 24, 2024 10:13:12 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:13:12 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T16:14:24.683Z] Apr 24, 2024 10:14:24 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:14:24 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T16:24:17.335Z] Apr 24, 2024 10:24:17 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:24:17 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T16:24:17.337Z] Apr 24, 2024 10:24:17 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:24:17 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T16:24:29.053Z] Apr 24, 2024 10:24:29 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:24:29 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T16:24:32.368Z] Apr 24, 2024 10:24:32 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 10:24:32 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T17:06:31.631Z] Apr 24, 2024 11:06:31 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:06:31 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T17:06:31.632Z] Apr 24, 2024 11:06:31 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:06:31 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T17:06:32.098Z] Apr 24, 2024 11:06:32 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:06:32 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T17:07:25.457Z] Apr 24, 2024 11:07:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:07:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T17:26:34.325Z] File /Users/jung/work/personalReceiptManagement/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/package.json changed, reloading triggers"}}
+[debug] [2024-04-24T17:26:34.436Z] File /Users/jung/work/personalReceiptManagement/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2024-04-24T17:26:35.438Z] Validating nodejs source
+[debug] [2024-04-24T17:26:36.434Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T17:26:36.434Z] Building nodejs source
+[debug] [2024-04-24T17:26:36.434Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T17:26:36.437Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T17:26:36.439Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8384
+
+[debug] [2024-04-24T17:26:36.968Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2024-04-24T17:40:35.894Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T17:40:36.896Z] Validating nodejs source
+[debug] [2024-04-24T17:40:38.122Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T17:40:38.123Z] Building nodejs source
+[debug] [2024-04-24T17:40:38.123Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T17:40:38.123Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T17:40:38.125Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8133
+
+[error] /Users/jung/work/personalReceiptManagement/functions/index.js:9
+import axios from "axios";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1274:20)
+    at Module._compile (node:internal/modules/cjs/loader:1320:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at loadModule (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:93:23)
+
+[debug] [2024-04-24T17:40:38.298Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-04-24T17:41:09.874Z] Apr 24, 2024 11:41:09 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:41:09 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T17:41:09.894Z] Apr 24, 2024 11:41:09 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:41:09 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T17:41:25.369Z] Apr 24, 2024 11:41:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:41:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T17:41:25.386Z] Apr 24, 2024 11:41:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 11:41:25 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T17:43:57.518Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T17:43:58.518Z] Validating nodejs source
+[debug] [2024-04-24T17:43:59.654Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T17:43:59.654Z] Building nodejs source
+[debug] [2024-04-24T17:43:59.654Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T17:43:59.655Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T17:43:59.656Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8220
+
+[error] /Users/jung/work/personalReceiptManagement/functions/index.js:9
+import axios from "axios";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1274:20)
+    at Module._compile (node:internal/modules/cjs/loader:1320:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at loadModule (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:93:23)
+
+[debug] [2024-04-24T17:43:59.842Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Cannot use import statement outside a module
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-04-24T17:54:37.005Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T17:54:38.006Z] Validating nodejs source
+[debug] [2024-04-24T17:54:38.939Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T17:54:38.939Z] Building nodejs source
+[debug] [2024-04-24T17:54:38.940Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T17:54:38.940Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T17:54:38.942Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8101
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T17:54:39.237Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[info] ✔  functions[us-central1-performOcr]: http function initialized (http://127.0.0.1:5001/receiptmanagement-1d51d/us-central1/performOcr). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/receiptmanagement-1d51d/us-central1/performOcr)."}}
+[debug] [2024-04-24T18:22:20.253Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T18:22:21.254Z] Validating nodejs source
+[debug] [2024-04-24T18:22:22.282Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T18:22:22.282Z] Building nodejs source
+[debug] [2024-04-24T18:22:22.282Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T18:22:22.283Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T18:22:22.284Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8165
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T18:22:22.603Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T18:26:55.734Z] Apr 24, 2024 12:26:55 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 12:26:55 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T18:26:55.737Z] Apr 24, 2024 12:26:55 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 12:26:55 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T18:57:34.670Z] Apr 24, 2024 12:57:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 12:57:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T18:57:34.711Z] Apr 24, 2024 12:57:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 12:57:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T19:07:58.896Z] Apr 24, 2024 1:07:58 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:07:58 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T19:07:58.897Z] Apr 24, 2024 1:07:58 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:07:58 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T19:08:09.429Z] Apr 24, 2024 1:08:09 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:08:09 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T19:08:09.445Z] Apr 24, 2024 1:08:09 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:08:09 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T19:09:51.860Z] Apr 24, 2024 1:09:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:09:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T19:09:51.864Z] Apr 24, 2024 1:09:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:09:51 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T19:10:57.945Z] Apr 24, 2024 1:10:57 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:10:57 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T19:10:57.962Z] Apr 24, 2024 1:10:57 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:10:57 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T19:41:14.659Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T19:41:15.659Z] Validating nodejs source
+[debug] [2024-04-24T19:41:16.844Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T19:41:16.844Z] Building nodejs source
+[debug] [2024-04-24T19:41:16.844Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T19:41:16.844Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T19:41:16.846Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8843
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T19:41:17.188Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T19:42:33.123Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T19:42:34.124Z] Validating nodejs source
+[debug] [2024-04-24T19:42:35.121Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T19:42:35.121Z] Building nodejs source
+[debug] [2024-04-24T19:42:35.121Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T19:42:35.122Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T19:42:35.123Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8205
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T19:42:35.411Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T19:43:01.296Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T19:43:02.298Z] Validating nodejs source
+[debug] [2024-04-24T19:43:03.328Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T19:43:03.328Z] Building nodejs source
+[debug] [2024-04-24T19:43:03.328Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T19:43:03.329Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T19:43:03.330Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8433
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T19:43:03.605Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T19:45:21.142Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T19:45:22.144Z] Validating nodejs source
+[debug] [2024-04-24T19:45:23.237Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T19:45:23.237Z] Building nodejs source
+[debug] [2024-04-24T19:45:23.237Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T19:45:23.238Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T19:45:23.239Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8388
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T19:45:23.623Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T19:51:06.799Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-24T19:51:07.800Z] Validating nodejs source
+[debug] [2024-04-24T19:51:08.922Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-24T19:51:08.922Z] Building nodejs source
+[debug] [2024-04-24T19:51:08.922Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-24T19:51:08.923Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-24T19:51:08.924Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8058
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-24T19:51:09.348Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-24T19:59:34.456Z] Apr 24, 2024 1:59:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 24, 2024 1:59:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 1:59:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 24, 2024 1:59:34 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T20:00:35.028Z] Apr 24, 2024 2:00:35 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 2:00:35 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T20:00:35.057Z] Apr 24, 2024 2:00:35 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 2:00:35 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T20:00:37.214Z] Apr 24, 2024 2:00:37 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 24, 2024 2:00:37 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 2:00:37 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 24, 2024 2:00:37 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-24T20:47:50.191Z] Apr 24, 2024 2:47:50 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 2:47:50 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-24T20:47:50.239Z] Apr 24, 2024 2:47:50 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 24, 2024 2:47:50 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T14:06:19.048Z] Apr 25, 2024 8:06:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 8:06:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T14:06:19.066Z] Apr 25, 2024 8:06:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 8:06:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T14:07:40.969Z] Apr 25, 2024 8:07:40 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 8:07:40 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T14:07:41.062Z] Apr 25, 2024 8:07:41 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 8:07:41 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T15:14:33.897Z] Apr 25, 2024 9:14:33 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 25, 2024 9:14:33 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 9:14:33 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 25, 2024 9:14:33 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T15:15:38.869Z] Apr 25, 2024 9:15:38 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 9:15:38 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T15:15:38.907Z] Apr 25, 2024 9:15:38 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 9:15:38 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T16:36:30.280Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:36:31.292Z] Validating nodejs source
+[debug] [2024-04-25T16:36:32.218Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:36:32.219Z] Building nodejs source
+[debug] [2024-04-25T16:36:32.219Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:36:32.230Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:36:32.233Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8282
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[error] TypeError: Cannot read properties of undefined (reading 'onRequest')
+    at Object.<anonymous> (/Users/jung/work/personalReceiptManagement/functions/index.js:30:38)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at loadModule (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:93:23)
+    at /Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2024-04-25T16:36:32.524Z] Got response code 400; body Failed to generate manifest from function source: TypeError: Cannot read properties of undefined (reading 'onRequest')
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-04-25T16:37:43.775Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:37:44.776Z] Validating nodejs source
+[debug] [2024-04-25T16:37:45.838Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:37:45.839Z] Building nodejs source
+[debug] [2024-04-25T16:37:45.839Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:37:45.839Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:37:45.840Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8832
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[error] TypeError: Cannot read properties of undefined (reading 'onRequest')
+    at Object.<anonymous> (/Users/jung/work/personalReceiptManagement/functions/index.js:30:38)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at loadModule (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:93:23)
+    at /Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2024-04-25T16:37:46.119Z] Got response code 400; body Failed to generate manifest from function source: TypeError: Cannot read properties of undefined (reading 'onRequest')
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-04-25T16:40:18.068Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:40:19.069Z] Validating nodejs source
+[debug] [2024-04-25T16:40:20.175Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:40:20.175Z] Building nodejs source
+[debug] [2024-04-25T16:40:20.175Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:40:20.176Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:40:20.177Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8838
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[error] TypeError: Cannot read properties of undefined (reading 'onRequest')
+    at Object.<anonymous> (/Users/jung/work/personalReceiptManagement/functions/index.js:30:38)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at loadModule (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:40:16)
+    at loadStack (/Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/runtime/loader.js:93:23)
+    at /Users/jung/work/personalReceiptManagement/functions/node_modules/firebase-functions/lib/bin/firebase-functions.js:56:56
+
+[debug] [2024-04-25T16:40:20.434Z] Got response code 400; body Failed to generate manifest from function source: TypeError: Cannot read properties of undefined (reading 'onRequest')
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-04-25T16:41:57.489Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:41:58.491Z] Validating nodejs source
+[debug] [2024-04-25T16:41:59.572Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:41:59.573Z] Building nodejs source
+[debug] [2024-04-25T16:41:59.573Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:41:59.573Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:41:59.574Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8464
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T16:41:59.959Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T16:48:13.375Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:48:14.377Z] Validating nodejs source
+[debug] [2024-04-25T16:48:15.582Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:48:15.583Z] Building nodejs source
+[debug] [2024-04-25T16:48:15.583Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:48:15.584Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:48:15.585Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8502
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T16:48:15.938Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T16:48:18.513Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:48:18.613Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:48:19.615Z] Validating nodejs source
+[debug] [2024-04-25T16:48:20.600Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:48:20.600Z] Building nodejs source
+[debug] [2024-04-25T16:48:20.600Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:48:20.601Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:48:20.602Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8681
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T16:48:20.927Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T16:48:47.551Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T16:48:48.552Z] Validating nodejs source
+[debug] [2024-04-25T16:48:49.597Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T16:48:49.597Z] Building nodejs source
+[debug] [2024-04-25T16:48:49.597Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T16:48:49.598Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T16:48:49.599Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8318
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T16:48:49.902Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T16:56:53.936Z] Apr 25, 2024 10:56:53 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 25, 2024 10:56:53 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 10:56:53 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 25, 2024 10:56:53 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T16:59:03.700Z] Apr 25, 2024 10:59:03 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 10:59:03 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T16:59:03.715Z] Apr 25, 2024 10:59:03 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 10:59:03 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T17:03:50.656Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:03:51.658Z] Validating nodejs source
+[debug] [2024-04-25T17:03:52.815Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:03:52.815Z] Building nodejs source
+[debug] [2024-04-25T17:03:52.815Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:03:52.815Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:03:52.816Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8771
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:03:53.154Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:05:20.408Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:05:21.410Z] Validating nodejs source
+[debug] [2024-04-25T17:05:22.469Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:05:22.470Z] Building nodejs source
+[debug] [2024-04-25T17:05:22.470Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:05:22.470Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:05:22.471Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8016
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:05:22.754Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:13:08.581Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:13:09.581Z] Validating nodejs source
+[debug] [2024-04-25T17:13:10.331Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:13:10.331Z] Building nodejs source
+[debug] [2024-04-25T17:13:10.331Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:13:10.332Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:13:10.333Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8396
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:13:10.686Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:21:06.839Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:21:07.841Z] Validating nodejs source
+[debug] [2024-04-25T17:21:08.538Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:21:08.538Z] Building nodejs source
+[debug] [2024-04-25T17:21:08.538Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:21:08.538Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:21:08.540Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8868
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:21:08.830Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:21:14.380Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:21:14.482Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:21:15.484Z] Validating nodejs source
+[debug] [2024-04-25T17:21:16.256Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:21:16.256Z] Building nodejs source
+[debug] [2024-04-25T17:21:16.257Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:21:16.257Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:21:16.258Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8534
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:21:16.584Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:23:14.785Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:23:15.786Z] Validating nodejs source
+[debug] [2024-04-25T17:23:16.554Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:23:16.554Z] Building nodejs source
+[debug] [2024-04-25T17:23:16.554Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:23:16.555Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:23:16.556Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8809
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:23:16.905Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:23:21.521Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:23:22.524Z] Validating nodejs source
+[debug] [2024-04-25T17:23:23.256Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:23:23.256Z] Building nodejs source
+[debug] [2024-04-25T17:23:23.257Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:23:23.257Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:23:23.258Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8660
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:23:23.587Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:23:28.403Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:23:28.503Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:23:29.505Z] Validating nodejs source
+[debug] [2024-04-25T17:23:30.325Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:23:30.325Z] Building nodejs source
+[debug] [2024-04-25T17:23:30.325Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:23:30.326Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:23:30.327Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8113
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:23:30.639Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:23:37.429Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:23:38.430Z] Validating nodejs source
+[debug] [2024-04-25T17:23:39.293Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:23:39.293Z] Building nodejs source
+[debug] [2024-04-25T17:23:39.293Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:23:39.294Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:23:39.294Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8932
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:23:39.595Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:26:30.571Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:26:31.572Z] Validating nodejs source
+[debug] [2024-04-25T17:26:32.393Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:26:32.393Z] Building nodejs source
+[debug] [2024-04-25T17:26:32.393Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:26:32.394Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:26:32.395Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8408
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:26:32.807Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:29:02.639Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:29:03.650Z] Validating nodejs source
+[debug] [2024-04-25T17:29:04.457Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:29:04.457Z] Building nodejs source
+[debug] [2024-04-25T17:29:04.457Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:29:04.458Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:29:04.459Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8417
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:29:04.783Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:35:32.920Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:35:33.921Z] Validating nodejs source
+[debug] [2024-04-25T17:35:34.718Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:35:34.718Z] Building nodejs source
+[debug] [2024-04-25T17:35:34.718Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:35:34.718Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:35:34.720Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8984
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:35:35.005Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:37:19.660Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:37:20.662Z] Validating nodejs source
+[debug] [2024-04-25T17:37:21.477Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:37:21.477Z] Building nodejs source
+[debug] [2024-04-25T17:37:21.478Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:37:21.478Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:37:21.479Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8985
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:37:21.792Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:40:26.540Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:40:27.541Z] Validating nodejs source
+[debug] [2024-04-25T17:40:28.200Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:40:28.200Z] Building nodejs source
+[debug] [2024-04-25T17:40:28.201Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:40:28.201Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:40:28.202Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8590
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:40:28.493Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:41:32.483Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:41:33.485Z] Validating nodejs source
+[debug] [2024-04-25T17:41:34.204Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:41:34.204Z] Building nodejs source
+[debug] [2024-04-25T17:41:34.204Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:41:34.204Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:41:34.205Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8586
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:41:34.478Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:42:06.881Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:42:07.883Z] Validating nodejs source
+[debug] [2024-04-25T17:42:08.736Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:42:08.736Z] Building nodejs source
+[debug] [2024-04-25T17:42:08.736Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:42:08.737Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:42:08.738Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8778
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:42:09.034Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:44:41.312Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:44:42.313Z] Validating nodejs source
+[debug] [2024-04-25T17:44:43.035Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:44:43.035Z] Building nodejs source
+[debug] [2024-04-25T17:44:43.035Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:44:43.035Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:44:43.036Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8645
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:44:43.373Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:50:25.611Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T17:50:26.612Z] Validating nodejs source
+[debug] [2024-04-25T17:50:27.440Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T17:50:27.440Z] Building nodejs source
+[debug] [2024-04-25T17:50:27.440Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T17:50:27.441Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T17:50:27.442Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8009
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T17:50:27.732Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T17:55:18.469Z] Apr 25, 2024 11:55:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Apr 25, 2024 11:55:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 11:55:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nApr 25, 2024 11:55:18 A.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T18:19:21.152Z] Apr 25, 2024 12:19:21 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 12:19:21 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T18:19:29.071Z] Apr 25, 2024 12:19:29 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 12:19:29 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T18:42:04.018Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T18:42:05.020Z] Validating nodejs source
+[debug] [2024-04-25T18:42:05.856Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T18:42:05.856Z] Building nodejs source
+[debug] [2024-04-25T18:42:05.856Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T18:42:05.857Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T18:42:05.858Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8205
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T18:42:06.270Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T19:12:26.434Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T19:12:27.436Z] Validating nodejs source
+[debug] [2024-04-25T19:12:28.751Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T19:12:28.751Z] Building nodejs source
+[debug] [2024-04-25T19:12:28.751Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T19:12:28.752Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T19:12:28.753Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8957
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T19:12:29.317Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T19:20:51.986Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T19:20:52.986Z] Validating nodejs source
+[debug] [2024-04-25T19:20:53.958Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T19:20:53.958Z] Building nodejs source
+[debug] [2024-04-25T19:20:53.958Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T19:20:53.959Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T19:20:53.960Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8662
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T19:20:54.309Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T19:33:06.320Z] File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/jung/work/personalReceiptManagement/functions/index.js changed, reloading triggers"}}
+[debug] [2024-04-25T19:33:07.321Z] Validating nodejs source
+[debug] [2024-04-25T19:33:08.169Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-25T19:33:08.169Z] Building nodejs source
+[debug] [2024-04-25T19:33:08.169Z] Failed to find version of module node: reached end of search path /Users/jung/work/personalReceiptManagement/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2024-04-25T19:33:08.170Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-25T19:33:08.172Z] Found firebase-functions binary at '/Users/jung/work/personalReceiptManagement/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8897
+
+[info] { clientID: undefined, apiKey: undefined }
+
+[debug] [2024-04-25T19:33:08.497Z] Got response from /__/functions.yaml {"endpoints":{"performOcr":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"performOcr"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: performOcr. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: performOcr."}}
+[debug] [2024-04-25T20:41:04.366Z] Apr 25, 2024 2:41:04 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 2:41:04 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T20:41:04.374Z] Apr 25, 2024 2:41:04 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 2:41:04 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2024-04-25T20:41:27.766Z] Apr 25, 2024 2:41:27 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 2:41:27 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2024-04-25T20:41:31.346Z] Apr 25, 2024 2:41:31 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Apr 25, 2024 2:41:31 P.M. com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
