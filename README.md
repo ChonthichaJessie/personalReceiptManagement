@@ -13,7 +13,7 @@ After logging in, customers need to pick a receipt image from their devices, whi
 Algolia search has been linked to the FirebaseDatabase extension. Then we can utilize built-in functions like "Hits" to display search indexes retrieved from Firebase. However, because all users are in the same database, Algolia will display information about other users as well. So, we only need to add filter index data from this logged-in user. That is why I include a user email field in each receipt json before uploading it to FirebaseDatabase. Use this field to filter the Algolia index.
 
 ## Author's message
-VeryFi OCR API offers free hitting API 50 times per month. This month, I've already spent 20 hits.  Thus, try not to use that function excessively and be considerate to let others enjoy it as well.
+VeryFi OCR API offers free hitting API 50 times per month. Thus, try not to use that function excessively and be considerate to let others enjoy it as well.
 There is still lots of room for improvement. I'm currently working on this app.
 
 ## Live demo: https://personal-receipt-management.vercel.app/
