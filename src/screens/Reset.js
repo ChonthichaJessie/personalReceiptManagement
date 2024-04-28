@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import styled from "styled-components";
-import { sendPasswordResetEmail } from "firebase/auth";
+import { sendPasswordReset } from "../utils/firebase";
 
 const Reset = () => {
   const [email, setEmail] = useState("");
@@ -19,6 +19,12 @@ const Reset = () => {
     if (user) navigate("/dashboard");
   }, [user, loading]);
 
+  const handlePasswordReset = async () => {
+    await sendPasswordReset(email);
+    alert("Password reset email has been sent to your email address");
+
+  }
+
   return (
     <Wrapper>
       <ResetContainer>
@@ -28,7 +34,7 @@ const Reset = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail Address"
         />
-        <ResetBtn onClick={() => sendPasswordResetEmail(email)}>
+        <ResetBtn onClick={handlePasswordReset}>
           Send password reset email
         </ResetBtn>
         <NoAccount>
