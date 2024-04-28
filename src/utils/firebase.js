@@ -43,18 +43,18 @@ const setOnUserLoggedInEmailCallback = (callback) => {
   onUserLoggedInEmailCallback = callback;
 };
 
+// concerned about the user's persistance
 export const resumeUser = () => {
   const storedUser = localStorage.getItem("user");
   if (storedUser) {
     const user = JSON.parse(storedUser);
-    if (user.displayName) {
-      console.log("User's name:", user.displayName);
-      onUserLoggedInDisplayCallback?.(user.displayName);
-    }
     if (user.email) {
       console.log("User's email:", user.email);
       onUserLoggedInEmailCallback?.(user.email);
     }
+    // eslint-disable-next-line no-lone-blocks
+    {user.displayName? onUserLoggedInDisplayCallback?.(user.displayName): onUserLoggedInDisplayCallback?.("Have any update today?")}
+    
   }
 };
 
