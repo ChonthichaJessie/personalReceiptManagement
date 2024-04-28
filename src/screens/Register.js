@@ -46,7 +46,7 @@ const Register = () => {
           placeholder="Password"
         />
         <RegisterBtn
-          onClick={() => logInWithEmailAndPassword(email, password)}
+          onClick={() => registerWithEmailAndPassword(email, password)}
         >
           Register
         </RegisterBtn>

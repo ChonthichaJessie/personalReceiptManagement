@@ -27,6 +27,10 @@ const Login = () => {
     await logInWithGoogle();
   };
 
+  const handleEmailLogin = async () => { 
+    await logInWithEmailAndPassword(email, password);
+  };
+
   useEffect(() => {
     resumeUser();
   }, []);
@@ -52,7 +56,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        <LoginBtn onClick={() => logInWithEmailAndPassword(email, password)}>
+        <LoginBtn onClick={handleEmailLogin}>
           Login with Email
         </LoginBtn>
         <LoginGoogle onClick={handleGoogleLogin}>Login with Google</LoginGoogle>

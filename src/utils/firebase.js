@@ -99,34 +99,58 @@ const logInWithEmailAndPassword = async (email, password) => {
   try {
     await setPersistence(auth, browserLocalPersistence);
     console.log("setPersistence");
-
-    await signInWithEmailAndPassword(auth, email, password);
-    console.log("Signed in with email and password");
-  } catch (error) {
-    console.error("Caught error", error);
+    
+    const res = await signInWithEmailAndPassword(auth, email, password);
+    const user = res.user;
+    localStorage.setItem("user", JSON.stringify(user));
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+    }
+    if (user.email) {
+      console.log("User's email:", user.email);
+      onUserLoggedInEmailCallback?.(user.email);
+      onUserLoggedInDisplayCallback?.("Have any update today?")
+    }
+    
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
   }
 };
 
-const registerWithEmailAndPassword = async (name, email, password) => {
+const registerWithEmailAndPassword = async (email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    //create user document in firestore
-    await addDoc(collection(db, `users/${user.uid}/receipt`), {
-      uid: user.uid,
-      name,
-      authProvider: "local",
-      email,
-    });
-    console.log("Registered with email and password");
-    if (user.uid) {
-      console.log("User's name:", user.displayName);
-      if (onUserLoggedInDisplayCallback) {
-        onUserLoggedInDisplayCallback(user.displayName);
-      }
+    localStorage.setItem("user", JSON.stringify(user));
+    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const docs = await getDocs(q);
+    if (docs.docs.length === 0) {
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
     }
-  } catch (error) {
-    console.error("Caught error", error);
+    if (user.displayName) {
+      console.log("User's name:", user.displayName);
+      onUserLoggedInDisplayCallback?.(user.displayName);
+    }
+    if (user.email) {
+      console.log("User's email:", user.email);
+      onUserLoggedInEmailCallback?.(user.email);
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
   }
 };
 
