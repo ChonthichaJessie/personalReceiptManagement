@@ -3,7 +3,7 @@
 Reciptify offers services for storing users' receipt information. Users can upload receipt images, and the application converts them to JSON data and stores them in the Firebase database. Then, users can search for any information in the uploaded receipts and view the receipt's data, including its photo.
 
 ## 🐱‍💻 Technology Using
-Firestore database, Firebase storage, Firebase Authentication, Verify Lens API (OCR Technology), Algoria API for substring searching
+Firestore database, Firebase storage, Firebase Authentication, Verify Lens API (OCR Technology), Algoria API for substring searching, Firebase cloud function
 
 ## 🐱‍👓 Architecture brifly description
 Reciptify begins the process by requesting the user to log in from <Login/> on Dashboard screen. Then it retrieves the user's name and email address from Firebase authentication (Google authentication and EmailPassword authentication), and passes both data to other components such as uploading photos to FirebaseStorage, uploading json receipt data to FiredatabaseDatabase, and setting up an AlgoliaSearching (substring searching API) fliter index for this user's email only.
