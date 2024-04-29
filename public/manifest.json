@@ -3,17 +3,17 @@
   "name": "Reciptify",
   "icons": [
     {
-      "src": "/background/Cat_Face_01.png",
+      "src": "background/Cat_Face_01.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/background/Cat_Face_01.png",
+      "src": "background/Cat_Face_01.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/background/Cat_Face_01.png",
+      "src": "background/Cat_Face_01.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_image": "/background/Background.png",
+  "background_color": "#ffffff"
 }
