@@ -44,11 +44,6 @@ const Dashboard = () => {
           <>
             <Top>
               <WelcomeWrapper>
-                <img
-                  src="/background/Cat_Face_07.png"
-                  alt="cat paw"
-                  height="100px"
-                />
                 <WelcomeTextWrapper>
                 <Welcome>Welcome</Welcome>
                 <Welcome>{name}</Welcome>

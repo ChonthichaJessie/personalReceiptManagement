@@ -20,15 +20,15 @@
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-instantsearch": "^7.7.0",
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1",
     "react-virtualized": "^9.22.5",
     "styled-components": "^6.1.8",
     "util": "^0.12.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

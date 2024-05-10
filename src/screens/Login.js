@@ -67,12 +67,6 @@ const Login = () => {
           Don't have an account? <Link to="/Register">Register</Link> now.
         </LoginLink>
       </LoginContainer>
-      <CatsDecorationBottom>
-        <img src="/background/Cat_Face_04.png" alt="cat paw" height="240px" />
-        <img src="/background/Cat_Face_01.png" alt="cat paw" height="240px" />
-        <img src="/background/Cat_Face_05.png" alt="cat paw" height="240px" />
-        <img src="/background/Cat_Face_02.png" alt="cat paw" height="240px" />
-      </CatsDecorationBottom>
     </Wrapper>
   );
 };

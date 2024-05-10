@@ -64,7 +64,7 @@ const AlgoliaSearchLists = ({ userEmail }) => {
   const doSearch = useCallback(async () => {
     const result = await index.search(search, {
       hitsPerPage: 10,
-      filters: `userEmail:"${userEmail}"`,
+       
     });
     setHits(result.hits);
   }, [userEmail, search]);
